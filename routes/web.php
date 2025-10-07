@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\NoteController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
@@ -35,4 +36,11 @@ Route::middleware("auth")->group(function() {
   // Start Project Management
   Route::get("/app/projects", [ProjectController::class, "index"])->name('admin.projects.index');
   // End Project Management
+
+  // Start Note Management
+  Route::get("/app/notes", [NoteController::class, "index"])->name('admin.notes.index');
+  Route::post("/app/notes", [NoteController::class, "store"])->name('admin.notes.store');
+  Route::put("/app/notes/{note}", [NoteController::class, "update"])->name('admin.notes.update');
+  Route::delete("/app/notes/{note}", [NoteController::class, "destroy"])->name('admin.notes.destroy');
+  // End Note Management
 });

@@ -27,6 +27,9 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('admin.projects.index') }}">
         <i class="fa-solid fa-diagram-project me-3"></i> Projects</a></li>
 
+    <li class="nav-item"><a class="nav-link" href="{{ route('admin.notes.index') }}">
+        <i class="fa-solid fa-note-sticky me-3"></i> Catatan</a></li>
+
   </ul>
   <div class="sidebar-footer border-top d-none d-md-flex">
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
