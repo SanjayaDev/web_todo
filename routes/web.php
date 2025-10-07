@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Livewire\Admin\Index as IndexDashboard;
@@ -30,4 +31,8 @@ Route::middleware("auth")->group(function() {
   Route::get("/app/roles/{role}", [RoleController::class, "show"])->name('admin.roles.show')->middleware("check_auth:003C");
   Route::put("/app/roles/{role}", [RoleController::class, "update"])->name('admin.roles.update')->middleware("check_auth:003D");
   // End role Management
+
+  // Start Project Management
+  Route::get("/app/projects", [ProjectController::class, "index"])->name('admin.projects.index');
+  // End Project Management
 });

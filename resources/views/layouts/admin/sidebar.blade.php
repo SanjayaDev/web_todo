@@ -24,6 +24,9 @@
           <i class="fa-solid fa-id-card me-3"></i> Jabatan</a></li>
     @endif
 
+    <li class="nav-item"><a class="nav-link" href="{{ route('admin.projects.index') }}">
+        <i class="fa-solid fa-diagram-project me-3"></i> Projects</a></li>
+
   </ul>
   <div class="sidebar-footer border-top d-none d-md-flex">
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
