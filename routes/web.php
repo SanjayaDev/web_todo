@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\NoteController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\ScheduleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Livewire\Admin\Index as IndexDashboard;
 
@@ -43,4 +44,8 @@ Route::middleware("auth")->group(function() {
   Route::put("/app/notes/{note}", [NoteController::class, "update"])->name('admin.notes.update');
   Route::delete("/app/notes/{note}", [NoteController::class, "destroy"])->name('admin.notes.destroy');
   // End Note Management
+
+  // Start Schedule Management
+  Route::get("/app/schedules", [ScheduleController::class, "index"])->name('admin.schedules.index');
+  // End Schedule Management
 });

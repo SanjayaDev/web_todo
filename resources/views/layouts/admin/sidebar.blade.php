@@ -30,6 +30,9 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('admin.notes.index') }}">
         <i class="fa-solid fa-note-sticky me-3"></i> Catatan</a></li>
 
+    <li class="nav-item"><a class="nav-link" href="{{ route('admin.schedules.index') }}">
+        <i class="fa-solid fa-calendar-days me-3"></i> Kalendar</a></li>
+
   </ul>
   <div class="sidebar-footer border-top d-none d-md-flex">
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
