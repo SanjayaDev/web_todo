@@ -32,6 +32,7 @@ class Login extends Component
       return;
     }
 
+    session(['user_id' => $user->id]);
     Auth::login($user);
     $this->error_login = FALSE;
     return redirect()->route('admin.dashboard.index');

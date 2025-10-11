@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\NoteController;
 use App\Http\Controllers\Admin\ProjectController;
@@ -48,4 +49,8 @@ Route::middleware("auth")->group(function() {
   // Start Schedule Management
   Route::get("/app/schedules", [ScheduleController::class, "index"])->name('admin.schedules.index');
   // End Schedule Management
+
+  // Start Contact Management
+  Route::get("/app/contacts", [ContactController::class, "index"])->name('admin.contacts.index');
+  // End Contact Management
 });

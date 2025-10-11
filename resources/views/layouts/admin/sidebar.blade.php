@@ -33,6 +33,9 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('admin.schedules.index') }}">
         <i class="fa-solid fa-calendar-days me-3"></i> Kalendar</a></li>
 
+    <li class="nav-item"><a class="nav-link" href="{{ route('admin.contacts.index') }}">
+        <i class="fa-solid fa-address-book me-3"></i> Kontak</a></li>
+
   </ul>
   <div class="sidebar-footer border-top d-none d-md-flex">
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
